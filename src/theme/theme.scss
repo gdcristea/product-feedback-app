@@ -1,0 +1,32 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Jost, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--UI-Background);
+}
+
+body {
+  background-color: var(--UI-Background) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
