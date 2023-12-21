@@ -1,0 +1,32 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(166.82% 166.82% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+  padding: 1rem 1.5rem;
+
+  &__left-side {
+    font-family: Jost, sans-serif;
+    color: var(--white);
+
+    &__title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      opacity: 0.75;
+    }
+  }
+
+  &__right-side {
+    width: 1rem;
+    height: 1rem;
+
+    img {
+      height: 100%;
+    }
+  }
+}
