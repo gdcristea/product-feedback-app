@@ -1,0 +1,9 @@
+<div class="categories-container">
+  <div
+    class="categories-container__category"
+    *ngFor="let category of categories"
+    [ngClass]="{'categories-container__category__checked': category.checked}"
+    (click)="onSelectCategory(category.id)">
+    {{category.name}}
+  </div>
+</div>
