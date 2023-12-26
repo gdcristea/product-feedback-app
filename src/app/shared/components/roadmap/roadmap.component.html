@@ -1,0 +1,32 @@
+<div class="roadmap-container">
+  <div class="roadmap-container__header">
+    <span
+      class="roadmap-container__header__title">
+      Roadmap
+    </span>
+    <span
+      class="roadmap-container__header__view"
+      (click)="navigateToRoadmap()">
+      View
+    </span>
+  </div>
+  <div class="roadmap-container__list">
+    <div
+      class="roadmap-container__list__element"
+      *ngFor="let element of roadmap">
+      <div class="roadmap-container__list__element__left-side">
+        <div
+          class="roadmap-container__list__element__left-side__bullet"
+          [ngStyle]="{ 'background-color': element.color }">
+        </div>
+        <div class="roadmap-container__list__element__left-side__status">
+          {{element.status}}
+        </div>
+      </div>
+
+      <div class="roadmap-container__list__element__value">
+        {{element.value}}
+      </div>
+    </div>
+  </div>
+</div>
