@@ -8,9 +8,9 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class HeaderComponent {
   /**
    * Show/Hide close icon
-   * true by default
+   * false by default
    */
-  showCloseIcon = true;
+  showCloseIcon = false;
 
   /**
    * Event emitter for showing the sidebar

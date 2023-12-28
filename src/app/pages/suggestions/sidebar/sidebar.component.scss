@@ -1,0 +1,13 @@
+.sidebar-container {
+  background-color: var(--lighter-blue);
+  width: 16.9375rem;
+  padding: 1.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 4.03125rem;
+
+ &__categories {
+   margin-bottom: 1.5rem;
+ }
+}
