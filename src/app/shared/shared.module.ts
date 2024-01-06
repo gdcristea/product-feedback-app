@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { RoadmapComponent } from './components/roadmap/roadmap.component';
+import {CustomButtonComponent} from "./components/custom-button/custom-button.component";
 
 @NgModule({
   imports: [
@@ -9,11 +10,13 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
   ],
   declarations: [
     CategoriesComponent,
-    RoadmapComponent
+    RoadmapComponent,
+    CustomButtonComponent
   ],
   exports: [
     CategoriesComponent,
-    RoadmapComponent
+    RoadmapComponent,
+    CustomButtonComponent
   ]
 })
 export class SharedModule {}

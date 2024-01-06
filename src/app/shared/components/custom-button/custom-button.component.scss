@@ -1,0 +1,63 @@
+.custom-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--white);
+  padding: 0.65625rem 1rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+
+  &__purple {
+    background-color: var(--purple-magenta);
+
+    &:hover {
+      background-color: var(--lighter-purple);
+    }
+
+    &:focus {
+      background-color: var(--lighter-purple);
+      outline: none;
+    }
+  }
+
+  &__blue {
+    background-color: var(--blue-indigo);
+
+    &:hover {
+      background-color: var(--light-blue);
+    }
+
+    &:focus {
+      background-color: var(--light-blue);
+      outline: none;
+    }
+  }
+
+  &__darkblue {
+    background-color: var(--dark-slate);
+
+    &:hover {
+      background-color: var(--dark-lavender);
+    }
+
+    &:focus {
+      background-color: var(--dark-lavender);
+      outline: none;
+    }
+  }
+
+  &__red {
+    background-color: var(--red);
+
+    &:hover {
+      background-color: var(--pale-red);
+    }
+
+    &:focus {
+      background-color: var(--pale-red);
+      outline: none;
+    }
+  }
+}
