@@ -1,0 +1,19 @@
+<div class="filter-bar-container">
+  <div class="filter-bar-container__left-side">
+    <div class="filter-bar-container__left-side__suggestions">
+      <img src="assets/images/icon-suggestions.svg" alt="icon suggestions">
+      <span class="filter-bar-container__left-side__suggestions__number">
+        {{numberOfFilteredResults}} Suggestions
+      </span>
+    </div>
+    <div class="filter-bar-container__left-side__filters">
+      <app-dropdown></app-dropdown>
+    </div>
+  </div>
+  <div class="filter-bar-container__right-side">
+    <app-custom-button
+      [content]="'+ Add Feedback'"
+      [backgroundColor]="'purple'">
+    </app-custom-button>
+  </div>
+</div>

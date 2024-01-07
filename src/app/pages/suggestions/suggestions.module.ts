@@ -5,9 +5,11 @@ import {SuggestionsRoutingModule} from "./suggestions-routing.module";
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {SharedModule} from "../../shared/shared.module";
+import { FilterBarComponent } from './filter-bar/filter-bar.component';
+import { DropdownComponent } from './filter-bar/dropdown/dropdown.component';
 
 @NgModule({
-  declarations: [SuggestionsComponent, HeaderComponent, SidebarComponent],
+  declarations: [SuggestionsComponent, HeaderComponent, SidebarComponent, FilterBarComponent, DropdownComponent],
   imports: [CommonModule, SuggestionsRoutingModule, SharedModule]
 })
 export class SuggestionsModule { }

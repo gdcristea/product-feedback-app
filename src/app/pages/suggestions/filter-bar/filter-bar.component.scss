@@ -1,0 +1,30 @@
+.filter-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-blue);
+  border-radius: 10px; //rem
+
+  &__left-side {
+    &__suggestions {
+      display: flex;
+      align-items: center;
+
+      &__number {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.25px;
+        color: var(--white);
+        margin-left: 16px;
+      }
+    }
+
+    &__filters {
+
+    }
+  }
+
+  &__right-side {
+
+  }
+}
