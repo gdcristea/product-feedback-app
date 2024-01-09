@@ -3,28 +3,45 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--dark-blue);
-  border-radius: 10px; //rem
+  padding: 0 1.5rem;
+
+  @media only screen and (min-width: 768px) {
+    border-radius: 0.625rem;
+    padding-right: 0.75rem;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    padding-right: 1rem;
+  }
 
   &__left-side {
+    display: flex;
+    align-items: center;
+
     &__suggestions {
-      display: flex;
-      align-items: center;
+      display: none;
+      margin-right: 2.375rem;
+
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+      }
 
       &__number {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 700;
-        letter-spacing: -0.25px;
+        letter-spacing: -0.015625rem;
         color: var(--white);
-        margin-left: 16px;
+        margin-left: 1rem;
       }
-    }
-
-    &__filters {
-
     }
   }
 
   &__right-side {
+    padding: 0.5rem 0;
 
+    @media only screen and (min-width: 768px) {
+      padding: 0.875rem 0;
+    }
   }
 }
