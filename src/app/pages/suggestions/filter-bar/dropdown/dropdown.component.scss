@@ -2,14 +2,50 @@
   position: relative;
 
   &__selected-filter {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--white);
     cursor: pointer;
+
+    &__filters {
+      &__bold {
+        font-weight: 700;
+        margin: 0 0.5rem;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
   }
 
   &__dropdown-list {
     position: absolute;
     z-index: 2;
+    top: 2.625rem;
+    width: 15.9375rem;
     background-color: var(--white);
-    border: 1px solid red;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.625rem 2.5rem -0.5rem rgba(55, 63, 104, 0.35);
+
+    &__line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1rem;
+      color: var(--slate-gray);
+      padding: 0.75rem 1.5rem;
+      border-bottom: 0.0625rem solid rgba(58, 67, 116, 0.15);
+      cursor: pointer;
+
+      &:last-child {
+        border: none;
+      }
+
+      &:hover {
+        color: var(--purple-magenta);
+      }
+    }
   }
 }
-

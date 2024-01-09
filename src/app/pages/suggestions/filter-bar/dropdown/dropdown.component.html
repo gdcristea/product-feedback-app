@@ -1,20 +1,23 @@
 <div class="dropdown-container">
   <div class="dropdown-container__selected-filter" (click)="toggleDropdown()">
-    <span>{{selectedFilter}}</span>
-    <img
-      *ngIf="!isOpen"
-      src="assets/images/icon-arrow-down.svg"
-      alt="arrow down">
+    <div class="dropdown-container__selected-filter__filters">
+      <span>Sort by:</span>
+      <span class="dropdown-container__selected-filter__filters__bold">{{selectedFilter}}</span>
+    </div>
     <img
       *ngIf="isOpen"
       src="assets/images/icon-arrow-up.svg"
       alt="arrow up">
+    <img
+      *ngIf="!isOpen"
+      src="assets/images/icon-arrow-down.svg"
+      alt="arrow down">
   </div>
-
   <div
     *ngIf="isOpen"
     class="dropdown-container__dropdown-list">
     <div
+      class="dropdown-container__dropdown-list__line"
       *ngFor="let filter of filters"
       (click)="selectFilter(filter)">
       <span>{{filter}}</span>

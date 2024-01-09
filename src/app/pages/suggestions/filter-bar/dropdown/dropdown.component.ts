@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,17 +7,24 @@ import { Component } from '@angular/core';
 })
 export class DropdownComponent {
   /**
+   * Event emitted when an option from the dropdown is selected
+   */
+  @Output() selectionEmitter: EventEmitter<string> = new EventEmitter<string>();
+
+  /**
    * The list of filters
    */
   filters: string[] = ['Most Upvotes', 'Least Upvotes', 'Most Comments', 'Least Comments'];
 
   /**
    * Current selected filter
+   * Default is 'Most Upvotes'
    */
   selectedFilter: string = 'Most Upvotes';
 
   /**
-   * Is dropdown open or not. Default false/not open.
+   * Is dropdown open or not.
+   * Default false/not open.
    */
   isOpen = false;
 
@@ -38,6 +45,7 @@ export class DropdownComponent {
     } else {
       this.selectedFilter = filter;
       this.isOpen = false;
+      this.selectionEmitter.emit(this.selectedFilter);
     }
   }
 }
