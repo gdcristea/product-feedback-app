@@ -1,13 +1,27 @@
 .sidebar-container {
-  background-color: var(--lighter-blue);
-  width: 16.9375rem;
-  padding: 1.5rem;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 4.03125rem;
+  &__content {
+    background-color: var(--lighter-blue);
+    width: 16.9375rem;
+    padding: 1.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 4.03125rem;
+    z-index: 2;
 
- &__categories {
-   margin-bottom: 1.5rem;
- }
+    &__categories {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__overlay {
+    background-color: var(--black);
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom: 0;
+    top: 4.03125rem;
+    z-index: 1;
+  }
 }

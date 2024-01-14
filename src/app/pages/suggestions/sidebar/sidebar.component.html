@@ -1,8 +1,11 @@
 <div
   class="sidebar-container"
   *ngIf="showSidebar">
-  <div class="sidebar-container__categories">
-    <app-categories></app-categories>
+  <div class="sidebar-container__overlay"></div>
+  <div class="sidebar-container__content">
+    <div class="sidebar-container__content__categories">
+      <app-categories></app-categories>
+    </div>
+    <app-roadmap></app-roadmap>
   </div>
-  <app-roadmap></app-roadmap>
 </div>

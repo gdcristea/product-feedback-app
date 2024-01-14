@@ -1,5 +1,4 @@
-1. add :focus where I have :hover.
 2. Sidebar: add animations to the sidebar when opening and closing it.
-3. Sidebar: add a gray overlay on the screen when the sidebar is open and also close the sidebar when clicking on the overlay.
+3. Sidebar: close the sidebar when clicking on the overlay.
 4. Header: add animations to the header when clicking on the right button.
 5. Test at the end the app on mobile.
