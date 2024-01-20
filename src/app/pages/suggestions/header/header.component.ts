@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component} from '@angular/core';
+import {ManageSidebarService} from "../../../services/manage-sidebar/manage-sidebar.service";
 
 @Component({
   selector: 'app-header',
@@ -10,19 +11,25 @@ export class HeaderComponent {
    * Show/Hide close icon
    * false by default
    */
-  showCloseIcon = false;
+  showCloseIcon: boolean;
+
+  constructor(private readonly manageSidebarService: ManageSidebarService) {}
+
+  ngOnInit(): void {
+    this.manageSidebarService.getSidebarStateAsObservable()
+        .subscribe((sidebarState: boolean): void => {
+          this.showCloseIcon = sidebarState;
+        })
+  }
 
   /**
-   * Event emitter for showing the sidebar
-   */
-  @Output() manageSidebar: EventEmitter<void> = new EventEmitter<void>();
-
-  /**
-   * Show icons (close, hamburger) based on clicks
-   * Emit event to show/hide the sidebar
+   * Show icons (close, hamburger) based on user's actions
    */
   clickOnIcon(): void {
-    this.showCloseIcon = !this.showCloseIcon;
-    this.manageSidebar.emit();
+    if (this.showCloseIcon) {
+      this.manageSidebarService.closeSidebar();
+    } else {
+      this.manageSidebarService.openSidebar();
+    }
   }
 }

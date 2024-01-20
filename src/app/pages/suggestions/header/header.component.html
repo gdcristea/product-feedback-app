@@ -4,15 +4,15 @@
     <p class="header-container__left-side__subtitle">Feedback Board</p>
   </div>
   <div
-    (click)="clickOnIcon()"
-    class="header-container__right-side">
+      (click)="clickOnIcon()"
+      class="header-container__right-side">
     <img
       *ngIf="showCloseIcon"
       src="assets/images/mobile/icon-close.svg"
       alt="icon close">
-      <img
-        *ngIf="!showCloseIcon"
-        src="assets/images/mobile/icon-hamburger.svg"
-        alt="icon hamburger">
+    <img
+      *ngIf="!showCloseIcon"
+      src="assets/images/mobile/icon-hamburger.svg"
+      alt="icon hamburger">
   </div>
 </div>
